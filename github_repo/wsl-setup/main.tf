@@ -18,4 +18,5 @@ terraform {
 
 locals {
   name = "wsl-setup"
+  tag = "git"
 }
