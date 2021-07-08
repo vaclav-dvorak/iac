@@ -1,10 +1,20 @@
-name: "Terraform"
+name: Terraform for wsl-setup
 
 on:
   push:
     branches:
       - main
+    paths:
+      - github_repo/wsl-setup/**
+      - github_repo/_module/**
   pull_request:
+      paths:
+      - github_repo/wsl-setup/**
+      - github_repo/_module/**
+
+defaults:
+  run:
+    working-directory: ./github_repo/wsl-setup
 
 jobs:
   terraform:
