@@ -7,10 +7,12 @@ on:
     paths:
       - github_repo/wsl-setup/**
       - github_repo/_module/**
+      - .github/workflows/tf-wsl-setup.yml
   pull_request:
       paths:
       - github_repo/wsl-setup/**
       - github_repo/_module/**
+      - .github/workflows/tf-wsl-setup.yml
 
 defaults:
   run:
@@ -29,6 +31,9 @@ jobs:
         with:
           terraform_version: 0.14.10
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Terraform version
+        run: terraform version
 
       - name: Terraform Format
         id: fmt
