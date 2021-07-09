@@ -1,26 +1,24 @@
-name: Terraform for wsl-setup
+name: Terraform for repositories
 
 on:
   push:
     branches:
       - main
     paths:
-      - github_repo/wsl-setup/**
-      - github_repo/_module/**
-      - .github/workflows/tf-wsl-setup.yml
+      - github_repo/**
+      - .github/workflows/tf-github-repo.yml
   pull_request:
       paths:
-      - github_repo/wsl-setup/**
-      - github_repo/_module/**
-      - .github/workflows/tf-wsl-setup.yml
+      - github_repo/**
+      - .github/workflows/tf-github-repo.yml
 
 defaults:
   run:
-    working-directory: ./github_repo/wsl-setup
+    working-directory: ./github_repo
 
 jobs:
   terraform:
-    name: Terraform for wsl-setup
+    name: Terraform for repositories
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

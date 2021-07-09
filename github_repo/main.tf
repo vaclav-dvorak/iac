@@ -4,7 +4,7 @@ terraform {
     organization = "vaclav-dvorak"
 
     workspaces {
-      name = "wsl-setup"
+      name = "github-repos"
     }
   }
   required_providers {
@@ -16,7 +16,9 @@ terraform {
   required_version = ">= 0.14"
 }
 
-locals {
-  name = "wsl-setup"
-  tag  = "git"
+module "github_repos" {
+  for_each = try(local.repos, {})
+
+  source = "./_module"
+  repo   = merge({ name = each.key }, each.value)
 }
