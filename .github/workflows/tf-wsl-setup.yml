@@ -20,7 +20,7 @@ defaults:
 
 jobs:
   terraform:
-    name: "Terraform"
+    name: Terraform for wsl-setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
