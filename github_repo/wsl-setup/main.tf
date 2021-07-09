@@ -1,6 +1,6 @@
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "vaclav-dvorak"
 
     workspaces {
@@ -9,7 +9,7 @@ terraform {
   }
   required_providers {
     github = {
-      source = "integrations/github"
+      source  = "integrations/github"
       version = "~> 4.12.0"
     }
   }
@@ -18,5 +18,5 @@ terraform {
 
 locals {
   name = "wsl-setup"
-  tag = "git"
+  tag  = "git"
 }
