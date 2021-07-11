@@ -36,7 +36,9 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: terraform init -backend-config="conn_str=`heroku config:get DATABASE_URL --app vd-terraform-backend`"
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
       - name: Terraform Validate
         id: validate

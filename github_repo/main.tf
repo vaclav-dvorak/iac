@@ -1,11 +1,6 @@
 terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "vaclav-dvorak"
-
-    workspaces {
-      name = "github-repos"
-    }
+  backend "pg" {
+    schema_name = "github_repo_state"
   }
   required_providers {
     github = {
@@ -16,7 +11,7 @@ terraform {
   required_version = ">= 0.14"
 }
 
-module "github_repos" {
+module "github_repo" {
   for_each = try(local.repos, {})
 
   source = "./_module"
