@@ -48,8 +48,8 @@ locals {
     }
     devops-workshop = {
       description          = "Rebood devops workshop"
-      vulnerability_alerts = true
       visibility           = "public"
+      vulnerability_alerts = true
     }
     maze = {
       description = "Find way in maze (Computerphile)"
