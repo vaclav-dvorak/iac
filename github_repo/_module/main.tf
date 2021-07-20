@@ -28,11 +28,9 @@ resource "github_repository" "repo" {
   allow_squash_merge     = try(var.repo.allow_squash_merge, false)
   delete_branch_on_merge = try(var.repo.delete_branch_on_merge, true)
   is_template            = try(var.repo.is_template, false)
-  has_downloads          = try(var.repo.has_downloads, false)
-  auto_init              = try(var.repo.auto_init, true)
-  gitignore_template     = try(var.repo.gitignore_template, "")
-  license_template       = try(var.repo.license_template, "mit")
-  archived               = try(var.repo.archived, false)
+  has_downloads          = false #? downloads feature is deprecated anyway
+  auto_init              = false
+  archived               = false
   topics                 = try(var.repo.topics, [])
   vulnerability_alerts   = try(var.repo.vulnerability_alerts, false)
 }
