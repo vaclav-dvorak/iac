@@ -65,5 +65,8 @@ locals {
     anna-helmova = {
       description = "Web Aničky"
     }
+    roguna = {
+      description = "Playground for roguelike game"
+    }
   }
 }
