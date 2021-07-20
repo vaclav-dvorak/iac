@@ -29,26 +29,10 @@ resource "github_repository" "repo" {
   delete_branch_on_merge = try(var.repo.delete_branch_on_merge, true)
   is_template            = try(var.repo.is_template, false)
   has_downloads          = false #? downloads feature is deprecated anyway
-  auto_init              = false
+  auto_init              = true
+  gitignore_template     = try(var.repo.gitignore_template, "Node")
+  license_template       = try(var.repo.license_template, "mit")
   archived               = false
   topics                 = try(var.repo.topics, [])
   vulnerability_alerts   = try(var.repo.vulnerability_alerts, false)
-}
-
-resource "github_branch" "main" {
-  depends_on = [
-    github_repository.repo
-  ]
-
-  repository = github_repository.repo.name
-  branch     = try(var.repo.default_branch, "main")
-}
-
-resource "github_branch_default" "main" {
-  depends_on = [
-    github_branch.main
-  ]
-
-  repository = github_repository.repo.name
-  branch     = try(var.repo.default_branch, "main")
 }
