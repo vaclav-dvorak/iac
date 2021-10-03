@@ -68,5 +68,8 @@ locals {
     roguna = {
       description = "Playground for roguelike game"
     }
+    go-cci-trigger = {
+      description = "Trigger Circle CI job with golang"
+    }
   }
 }
