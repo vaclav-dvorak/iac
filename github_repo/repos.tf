@@ -70,6 +70,7 @@ locals {
     }
     go-cci-trigger = {
       description = "Trigger Circle CI job with golang"
+      gitignore_template = "Go"
     }
   }
 }
