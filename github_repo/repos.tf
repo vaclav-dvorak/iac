@@ -72,5 +72,9 @@ locals {
       description        = "Trigger Circle CI job with golang"
       gitignore_template = "Go"
     }
+    go-telegram-test = {
+      description        = "Attempt on telegram bot with golang"
+      gitignore_template = "Go"
+    }
   }
 }
