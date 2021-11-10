@@ -76,5 +76,10 @@ locals {
       description        = "Attempt on telegram bot with golang"
       gitignore_template = "Go"
     }
+    go-game-of-life = {
+      description        = "Simple implementation of game of life in golang"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
