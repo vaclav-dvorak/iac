@@ -81,5 +81,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    go-names = {
+      description        = "Name search exercise with BoubleTee TUI"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
