@@ -86,5 +86,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    go-mandel = {
+      description        = "Simple implementation of z^2 mandelbrot set"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }

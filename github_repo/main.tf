@@ -5,10 +5,10 @@ terraform {
   required_providers {
     github = {
       source  = "integrations/github"
-      version = "~> 4.12.0"
+      version = "~> 4.20.0"
     }
   }
-  required_version = ">= 0.14"
+  required_version = ">= 1.1"
 }
 
 module "github_repo" {
