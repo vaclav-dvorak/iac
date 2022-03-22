@@ -35,5 +35,5 @@ resource "github_repository" "repo" {
   license_template       = try(var.repo.license_template, "mit")
   archived               = false
   topics                 = try(var.repo.topics, [])
-  vulnerability_alerts   = try(var.repo.vulnerability_alerts, false)
+  vulnerability_alerts   = try(var.repo.vulnerability_alerts, true)
 }

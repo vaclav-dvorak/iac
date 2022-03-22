@@ -4,8 +4,7 @@ locals {
       description = "test of DPD api"
     }
     toulky = {
-      description          = "App for our trips"
-      vulnerability_alerts = true
+      description = "App for our trips"
     }
     bara = {
       description = "Bara na Zelandu"
@@ -42,22 +41,19 @@ locals {
       description = "Veteran Car Club Sturm"
     }
     summit-formule = {
-      description          = "Summit workshop - formule"
-      visibility           = "public"
-      vulnerability_alerts = true
+      description = "Summit workshop - formule"
+      visibility  = "public"
     }
     devops-workshop = {
-      description          = "Rebood devops workshop"
-      visibility           = "public"
-      vulnerability_alerts = true
+      description = "Rebood devops workshop"
+      visibility  = "public"
     }
     maze = {
       description = "Find way in maze (Computerphile)"
     }
     summit-pokemon = {
-      description          = "Summit workshop - pokemon"
-      visibility           = "public"
-      vulnerability_alerts = true
+      description = "Summit workshop - pokemon"
+      visibility  = "public"
     }
     mefbox = {
       description = "Mefovo hřiště"
