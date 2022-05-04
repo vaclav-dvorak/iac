@@ -87,5 +87,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    go-btc-mayer-bot = {
+      description        = "Coinbase bot controling trading orders based on Mayer Multiple"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
