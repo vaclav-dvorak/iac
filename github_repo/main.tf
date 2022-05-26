@@ -8,7 +8,7 @@ terraform {
       version = "~> 4.24.0"
     }
   }
-  required_version = ">= 1.1"
+  required_version = ">= 1.2"
 }
 
 module "github_repo" {
