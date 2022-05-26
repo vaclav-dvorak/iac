@@ -92,5 +92,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    go-time-to-block = {
+      description        = "Converts time to btc block number"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
