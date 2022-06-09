@@ -97,5 +97,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    goit = {
+      description        = "Git helper terminal tool"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
