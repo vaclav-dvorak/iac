@@ -102,5 +102,8 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    svelte-veribi-dashboard = {
+      description = "Exercise in Svelte for Veribi"
+    }
   }
 }
