@@ -105,5 +105,9 @@ locals {
     svelte-veribi-dashboard = {
       description = "Exercise in Svelte for Veribi"
     }
+    veribi-cli = {
+      description = "Command line intereface for Veribi platform"
+      gitignore_template = "Go"
+    }
   }
 }
