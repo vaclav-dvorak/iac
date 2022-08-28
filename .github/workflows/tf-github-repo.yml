@@ -28,7 +28,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.1
-          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+          # cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform Format
         id: fmt
@@ -36,9 +36,11 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init -backend-config="conn_str=`heroku config:get DATABASE_URL --app vd-terraform-backend`"
+        run: terraform init
         env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
 
       - name: Terraform Validate
         id: validate
@@ -55,7 +57,7 @@ jobs:
 
       - name: Upload Trivy scan results to GitHub Security tab
         if: github.event_name == 'pull_request'
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
 
@@ -65,6 +67,9 @@ jobs:
         run: terraform plan -no-color
         continue-on-error: true
         env:
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           GITHUB_TOKEN: ${{ secrets.TF_GITHUB_TOKEN }}
 
       - uses: actions/github-script@v6
@@ -104,4 +109,7 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
         env:
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           GITHUB_TOKEN: ${{ secrets.TF_GITHUB_TOKEN }}
