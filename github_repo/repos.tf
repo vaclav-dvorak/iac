@@ -107,6 +107,7 @@ locals {
     }
     veribi-cli = {
       description        = "Command line interface for Veribi platform"
+      visibility         = "public"
       gitignore_template = "Go"
     }
   }
