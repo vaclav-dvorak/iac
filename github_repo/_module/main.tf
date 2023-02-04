@@ -13,7 +13,7 @@ resource "github_repository" "repo" {
       auto_init,
       license_template,
       gitignore_template,
-      branches, #! Workaround for integrations/terraform-provider-github#1037.
+      # branches, #! Workaround for integrations/terraform-provider-github#1037.
     ]
   }
 
