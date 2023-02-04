@@ -110,5 +110,14 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    go-dca-stat = {
+      description        = "Dollar cost averaging stats"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
+    dev-db-dockers = {
+      description = "Database containers for development and automatic testing"
+      visibility  = "public"
+    }
   }
 }
