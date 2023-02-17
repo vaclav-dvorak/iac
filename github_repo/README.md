@@ -17,7 +17,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_github_repo"></a> [github\_repo](#module\_github\_repo) | ./_module | n/a |
+| <a name="module_github_repo"></a> [github\_repo](#module\_github\_repo) | ../modules/repo | n/a |
 
 ## Resources
 
