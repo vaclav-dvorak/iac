@@ -119,5 +119,10 @@ locals {
       description = "Database containers for development and automatic testing"
       visibility  = "public"
     }
+    gout-black = {
+      description        = "Search for black metal events in prague clubs"
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
   }
 }
