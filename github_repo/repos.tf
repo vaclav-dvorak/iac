@@ -124,5 +124,11 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
+    advent-of-code = {
+      description        = "My solutions to the Advents of Code."
+      visibility         = "public"
+      gitignore_template = "Go"
+    }
+
   }
 }
