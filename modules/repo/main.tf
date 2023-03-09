@@ -33,7 +33,7 @@ resource "github_repository" "repo" {
   is_template            = try(var.repo.is_template, false)
   has_downloads          = false #? downloads feature is deprecated anyway
   auto_init              = true
-  gitignore_template     = try(var.repo.gitignore_template, "Node")
+  gitignore_template     = local.gitignore_template == "none" ? null : local.gitignore_template
   license_template       = try(var.repo.license_template, "mit")
   archived               = false
   topics                 = try(var.repo.topics, [])
