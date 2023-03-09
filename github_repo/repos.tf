@@ -129,6 +129,10 @@ locals {
       visibility         = "public"
       gitignore_template = "Go"
     }
-
+    homebrew-tap = {
+      description        = "This is the Homebrew tap for vaclav-dvorak."
+      visibility         = "public"
+      gitignore_template = "none"
+    }
   }
 }
