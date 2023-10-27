@@ -14,7 +14,7 @@ Terraform module for GitHub repository
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.17.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
 
 ## Modules
 

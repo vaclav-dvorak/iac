@@ -78,9 +78,10 @@ locals {
       gitignore_template = "Go"
     }
     go-names = {
-      description        = "Name search exercise with BoubleTee TUI"
-      visibility         = "public"
-      gitignore_template = "Go"
+      description          = "Name search exercise with BoubleTee TUI"
+      visibility           = "public"
+      gitignore_template   = "Go"
+      vulnerability_alerts = false
     }
     go-mandel = {
       description        = "Simple implementation of z^2 mandelbrot set"

@@ -7,7 +7,8 @@ IaC for all GitHub repositories managed by terraform
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.2 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
 
 ## Providers
 
