@@ -1,23 +1,26 @@
 repos:
-- hooks:
-  - id: check-yaml
-  - id: check-merge-conflict
-  - id: end-of-file-fixer
-    exclude: README.md
-  - id: trailing-whitespace
-    exclude: README.md
-  - id: mixed-line-ending
-  - id: check-added-large-files
-  repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.3.0
-- hooks:
-  - id: terraform_fmt
-  - id: terraform_tflint
-  - id: terraform_validate
-  - id: terraform_docs
-  repo: https://github.com/antonbabenko/pre-commit-terraform
-  rev: v1.44.0
-- hooks:
-  - id: gitleaks
-  repo: https://github.com/zricethezav/gitleaks
-  rev: v8.15.3
+  - hooks:
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: mixed-line-ending
+      - id: check-added-large-files
+      - id: detect-private-key
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+  - hooks:
+      - id: terraform_fmt
+      - id: terraform_tflint
+      - id: terraform_providers_lock
+        args:
+          - --hook-config=--mode=only-check-is-current-lockfile-cross-platform
+      - id: terraform_tfsec
+      - id: terraform_docs
+    repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.83.4
+  - hooks:
+      - id: gitleaks
+    repo: https://github.com/zricethezav/gitleaks
+    rev: v8.15.3
