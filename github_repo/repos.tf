@@ -73,9 +73,10 @@ locals {
       gitignore_template = "Go"
     }
     go-game-of-life = {
-      description        = "Simple implementation of game of life in golang"
-      visibility         = "public"
-      gitignore_template = "Go"
+      description          = "Simple implementation of game of life in golang"
+      visibility           = "public"
+      gitignore_template   = "Go"
+      vulnerability_alerts = false
     }
     go-names = {
       description          = "Name search exercise with BoubleTee TUI"
@@ -84,9 +85,10 @@ locals {
       vulnerability_alerts = false
     }
     go-mandel = {
-      description        = "Simple implementation of z^2 mandelbrot set"
-      visibility         = "public"
-      gitignore_template = "Go"
+      description          = "Simple implementation of z^2 mandelbrot set"
+      visibility           = "public"
+      gitignore_template   = "Go"
+      vulnerability_alerts = false
     }
     go-btc-mayer-bot = {
       description        = "Coinbase bot controling trading orders based on Mayer Multiple"
